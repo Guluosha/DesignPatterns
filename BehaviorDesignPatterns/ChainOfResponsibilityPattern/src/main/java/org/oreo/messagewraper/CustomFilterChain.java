@@ -1,6 +1,6 @@
-package com.oreo.messagewraper;
+package org.oreo.messagewraper;
 
-import com.oreo.CustomFilter;
+import org.oreo.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

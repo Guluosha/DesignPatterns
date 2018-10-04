@@ -1,10 +1,7 @@
-package com.oreo;
+package org.oreo;
 
-import com.oreo.concretefilter.FaceFilter;
-import com.oreo.concretefilter.HTMLCustomFilterImpl;
-import com.oreo.concretefilter.SensitiveFilter;
-import com.oreo.messagewraper.RequestMessage;
-import com.oreo.messagewraper.ResponseMessage;
+import org.oreo.concretefilter.*;
+import org.oreo.messagewraper.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

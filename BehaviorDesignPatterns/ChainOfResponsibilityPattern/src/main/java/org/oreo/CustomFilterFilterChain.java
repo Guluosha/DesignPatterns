@@ -1,11 +1,8 @@
-package com.oreo;
+package org.oreo;
 
-import com.oreo.messagewraper.CustomFilterChain;
-import com.oreo.messagewraper.RequestMessage;
-import com.oreo.messagewraper.ResponseMessage;
+import org.oreo.messagewraper.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

@@ -1,4 +1,4 @@
-package com.oreo.messagewraper;
+package org.oreo.messagewraper;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

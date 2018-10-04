@@ -1,9 +1,7 @@
-package com.oreo.concretefilter;
+package org.oreo.concretefilter;
 
-import com.oreo.CustomFilter;
-import com.oreo.CustomFilterFilterChain;
-import com.oreo.messagewraper.RequestMessage;
-import com.oreo.messagewraper.ResponseMessage;
+import org.oreo.*;
+import org.oreo.messagewraper.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

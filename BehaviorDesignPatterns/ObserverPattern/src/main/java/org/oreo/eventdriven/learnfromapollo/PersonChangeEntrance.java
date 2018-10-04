@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司
+ * 人物改变事件入口
  *
  * @author 李沛恒(QQ ： 单曲循环)
  * @date 2018/5/27 ~ 下午 7:49

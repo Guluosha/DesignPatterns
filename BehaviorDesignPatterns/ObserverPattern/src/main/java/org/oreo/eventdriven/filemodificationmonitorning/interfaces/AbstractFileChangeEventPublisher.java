@@ -1,12 +1,7 @@
 package org.oreo.eventdriven.filemodificationmonitorning.interfaces;
 
-import eventdriven.filemodificationmonitorning.interfaces.FileChangeEventPublisher;
-import eventdriven.filemodificationmonitorning.interfaces.FileChangeListener;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.EventListener;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

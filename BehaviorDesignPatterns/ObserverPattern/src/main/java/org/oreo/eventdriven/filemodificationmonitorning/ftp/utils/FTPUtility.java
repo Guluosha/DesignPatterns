@@ -1,11 +1,10 @@
 package org.oreo.eventdriven.filemodificationmonitorning.ftp.utils;
 
-import eventdriven.filemodificationmonitorning.ftp.bean.FTPConnectionInfoBean;
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.net.ftp.FTPReply;
+import org.apache.commons.net.ftp.*;
+import org.oreo.eventdriven.filemodificationmonitorning.ftp.bean.*;
 
 import java.io.*;
-import java.net.InetAddress;
+import java.net.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

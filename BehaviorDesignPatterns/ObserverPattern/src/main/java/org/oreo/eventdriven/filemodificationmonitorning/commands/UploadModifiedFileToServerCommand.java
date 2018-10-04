@@ -1,9 +1,8 @@
 package org.oreo.eventdriven.filemodificationmonitorning.commands;
 
-import eventdriven.filemodificationmonitorning.ftp.utils.FTPUtility;
-import eventdriven.filemodificationmonitorning.interfaces.Command;
-import eventdriven.filemodificationmonitorning.sftp.utils.SFTPUtility;
+import org.oreo.eventdriven.filemodificationmonitorning.ftp.utils.*;
 import org.oreo.eventdriven.filemodificationmonitorning.interfaces.*;
+import org.oreo.eventdriven.filemodificationmonitorning.sftp.utils.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

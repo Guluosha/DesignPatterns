@@ -1,13 +1,9 @@
 package org.oreo.eventdriven.filemodificationmonitorning.interfaces;
 
-import eventdriven.filemodificationmonitorning.workerthread.factory.SubmitChangedFileThreadFactory;
 import org.oreo.eventdriven.filemodificationmonitorning.workerthread.factory.*;
 
-import java.io.File;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.io.*;
+import java.util.concurrent.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

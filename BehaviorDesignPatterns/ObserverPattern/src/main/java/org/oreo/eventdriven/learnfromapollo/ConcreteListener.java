@@ -2,6 +2,7 @@ package org.oreo.eventdriven.learnfromapollo;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司
+ * 人物改变具体监听器
  *
  * @author 李沛恒(QQ ： 单曲循环)
  * @date 2018/5/27 ~ 下午 7:00

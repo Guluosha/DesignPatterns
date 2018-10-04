@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>StructTypeDesignPatterns</artifactId>
+		<groupId>com.oreo</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>DecoratorPattern</artifactId>
+	<description>
+		装饰器模式
+		装饰器模式用于给某些类动态附加职责或者功能，并且不影响到其他的类
+		构造：
+			1.需要一个抽象基础组件（AbstractComponent）；
+			2.一个或多个具体组件（ConcreteComponent）继承自抽象组件；
+			3.一个具体或抽象装饰器（Decorator/AbstractDecorator），该装饰器持有抽象基础组件的引用；
+			4.一个或多个装饰器（Decorator），在该装饰器中添加抽象组件没有的功能或者职责。
+	</description>
+
+</project>

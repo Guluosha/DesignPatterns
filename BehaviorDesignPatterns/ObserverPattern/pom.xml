@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>BehaviorDesignPatterns</artifactId>
+		<groupId>com.oreo</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<description>
+		观察者模式，有两种形式：消息订阅模式和事件驱动模式 1.消息订阅：抽象主题(AbstractSubject)、抽象观察者(AbstractObserver)、具体主题(ConcreteSubject)、具体观察者(ConcreteObserver)，其中，抽象主题持有抽象观察者的引用，抽象主题在更新了状态之后，调用抽象观察者的更新方法。这里的状态指的是抽象主题中观察的对象的状态。 2.事件驱动：事件对象监听器(一般建议继承自JDK的EventListener，是一个接口，面向接口编程)、事件(一般建议继承自JDK的EventObject，需要监听的、会改变的事件，目前理解为一个简单对象)、消息发布者(EventPublisher，持有事件的引用，当事件发生时，调用监听器的处理方法；建议定义为接口，面向接口编程)
+	</description>
+
+	<artifactId>ObserverPattern</artifactId>
+
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<compiler.version>3.7.0</compiler.version>
+		<commons-io.version>2.5</commons-io.version>
+		<commons-net.version>3.3</commons-net.version>
+		<jsch.version>0.1.54</jsch.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compiler.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${file.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons-net.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${jsch.version}</version>
+		</dependency>
+	</dependencies>
+</project>

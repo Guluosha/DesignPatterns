@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>CreateTypeDesignPatterns</artifactId>
+		<groupId>com.oreo</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>BuilderPattern</artifactId>
+	<description>
+		生成器模式（或者建造者模式）
+		将一个对象的构建和他的表示分离，使得同样的构建过程可以创建不同的表示（意思就是说，这个对象的创建过程可能很复杂，可以有多种创建方式，这么多创建方式，全部交给一个类去完成，然后再由这个类返回创建好的对象，这样就不用在代码里面写很多创建过程，显得简洁明了）
+		构造：
+			1.
+	</description>
+
+
+</project>

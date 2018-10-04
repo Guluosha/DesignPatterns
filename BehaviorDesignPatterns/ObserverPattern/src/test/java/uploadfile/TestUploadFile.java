@@ -1,9 +1,9 @@
 package uploadfile;
 
-import eventdriven.filemodificationmonitorning.ftp.bean.FTPConnectionInfoBean;
-import eventdriven.filemodificationmonitorning.ftp.utils.FTPUtility;
+import org.oreo.eventdriven.filemodificationmonitorning.ftp.bean.*;
+import org.oreo.eventdriven.filemodificationmonitorning.ftp.utils.*;
 
-import java.io.File;
+import java.io.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司

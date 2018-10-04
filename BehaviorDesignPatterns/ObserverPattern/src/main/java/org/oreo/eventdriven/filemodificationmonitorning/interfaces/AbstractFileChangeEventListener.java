@@ -12,7 +12,7 @@ import java.util.concurrent.*;
  * @date 2018/7/4 ~ 下午 3:31
  */
 
-public abstract class AbstractFileChangeListener implements FileChangeListener {
+public abstract class AbstractFileChangeEventListener implements FileChangeEventListener {
 
 	protected static ThreadPoolExecutor THREAD_POOL_EXECUTOR;
 

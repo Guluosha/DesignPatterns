@@ -5,6 +5,7 @@ import org.oreo.eventdriven.filemodificationmonitorning.ftp.bean.*;
 
 import java.io.*;
 import java.net.*;
+import java.nio.charset.*;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司
@@ -26,7 +27,7 @@ public class FTPUtility {
 	public void initFTPConnection(FTPConnectionInfoBean connectionInfo) {
 		this.connectionInfo = connectionInfo;
 		ftpClient = new FTPClient();
-		ftpClient.setControlEncoding("uft-8");
+		ftpClient.setControlEncoding(StandardCharsets.UTF_8.name());
 		System.out.println("正在连接服务器，地址：" + connectionInfo.getServerAddress());
 		try {
 			ftpClient.connect(InetAddress.getByName(connectionInfo.getServerAddress()));

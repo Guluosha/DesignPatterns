@@ -15,13 +15,13 @@ import java.io.*;
  * @date 2018/6/27 ~ 下午 11:37
  */
 
-public class ConcreteFileChangeListener extends AbstractFileChangeListener {
+public class ConcreteFileChangeEventListener extends AbstractFileChangeEventListener {
 
 	private SFTPConnectionInfoBean sftpConnectionInfoBean;
 	private static SubmitChangedFileThread SUBMITCHANGEDFILETHREAD = new SubmitChangedFileThread();
 //	private SFTPConnectionInfoBean sftpConnectionInfoBean = new SFTPConnectionInfoBean("10.11.61.39", "22", "spdb", "spdb12345", "");
 
-	public ConcreteFileChangeListener setSftpConnectionInfoBean(SFTPConnectionInfoBean sftpConnectionInfoBean) {
+	public ConcreteFileChangeEventListener setSftpConnectionInfoBean(SFTPConnectionInfoBean sftpConnectionInfoBean) {
 		this.sftpConnectionInfoBean = sftpConnectionInfoBean;
 		return this;
 	}

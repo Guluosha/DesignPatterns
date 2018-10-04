@@ -19,15 +19,15 @@ public abstract class AbstractFileChangeEventPublisher implements FileChangeEven
 	@Override
 	public void publishFileChangeEvent(File modifiedFile) {
 		for (EventListener listener : listeners) {
-			if (listener instanceof FileChangeListener) {
-				((FileChangeListener) listener).handleFileModification(modifiedFile);
+			if (listener instanceof FileChangeEventListener) {
+				((FileChangeEventListener) listener).handleFileModification(modifiedFile);
 			}
 		}
 	}
 
 	@Override
 	public void registryFileListeners(EventListener fileChangeListener) {
-		if (fileChangeListener instanceof FileChangeListener) {
+		if (fileChangeListener instanceof FileChangeEventListener) {
 			if (!listeners.contains(fileChangeListener)) {
 				listeners.add(fileChangeListener);
 			}
@@ -36,7 +36,7 @@ public abstract class AbstractFileChangeEventPublisher implements FileChangeEven
 
 	@Override
 	public void removeFileChangeListener(EventListener fileChangeListener) {
-		if (fileChangeListener instanceof FileChangeListener) {
+		if (fileChangeListener instanceof FileChangeEventListener) {
 			if (listeners.contains(fileChangeListener)) {
 				listeners.remove(fileChangeListener);
 			}

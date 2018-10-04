@@ -7,7 +7,7 @@ package org.oreo.eventdriven.extendseventobject;
  * @date 2018/5/30 ~ 下午 5:42
  */
 
-public class ConcretePeopleChangeListener implements PeopleChangeListener {
+public class ConcretePeopleChangeEventListener implements PeopleChangeEventListener {
 
 	@Override
 	public void onPeopleChangeEvent(Object eventObject) {

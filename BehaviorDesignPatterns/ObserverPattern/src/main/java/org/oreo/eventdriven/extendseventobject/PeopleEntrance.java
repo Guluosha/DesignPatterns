@@ -14,11 +14,11 @@ public class PeopleEntrance {
 
 	public static void main(String[] args) {
 		PeopleEntrance peopleEntrance = new PeopleEntrance();
-		ConcretePeopleChangeEvent peopleChangeEvent = peopleEntrance.init();
+		ConcretePeopleChangeEventPublisher peopleChangeEventPublisher = peopleEntrance.init();
 		do
 		{
 			People inputPeople = peopleEntrance.receiveInputPersonContent();
-			peopleChangeEvent.onPeopleChanged(inputPeople);
+			peopleChangeEventPublisher.onPeopleChanged(inputPeople);
 		}
 		while (true);
 	}
@@ -35,11 +35,11 @@ public class PeopleEntrance {
 		return new People(this, name, age, sex);
 	}
 
-	private ConcretePeopleChangeEvent init() {
+	private ConcretePeopleChangeEventPublisher init() {
 		People people = new People(this, "asd", "asd", "asd");
-		ConcretePeopleChangeEvent peopleChangeEvent = new ConcretePeopleChangeEvent();
-		peopleChangeEvent.registerListener(new ConcretePeopleChangeListener());
-		peopleChangeEvent.setPeople(people);
-		return peopleChangeEvent;
+		ConcretePeopleChangeEventPublisher peopleChangeEventPublisher = new ConcretePeopleChangeEventPublisher();
+		peopleChangeEventPublisher.registerPeopleChangeEventListener(new ConcretePeopleChangeEventListener());
+		peopleChangeEventPublisher.setPeople(people);
+		return peopleChangeEventPublisher;
 	}
 }

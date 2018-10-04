@@ -4,6 +4,7 @@ import java.util.EventObject;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司
+ * 被监听事件对象
  *
  * @author 李沛恒(QQ ： 单曲循环)
  * @date 2018/5/29 ~ 下午 10:08

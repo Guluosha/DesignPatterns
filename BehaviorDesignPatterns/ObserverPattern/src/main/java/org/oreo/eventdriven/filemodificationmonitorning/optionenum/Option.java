@@ -10,27 +10,47 @@ package org.oreo.eventdriven.filemodificationmonitorning.optionenum;
 public enum Option {
 
 	/**
+	 * IP地址
+	 */
+	ip("ip"),
+
+	/**
+	 * 端口号
+	 */
+	port("port"),
+
+	/**
 	 * 文件类型
 	 */
-	filetype,
+	filetype("filetype"),
 
 	/**
 	 * 文件所在目录
 	 */
-	filepath,
+	filepath("filepath"),
 
 	/**
 	 * 用户名
 	 */
-	username,
+	username("username"),
 
 	/**
 	 * 用户密码
 	 */
-	password,
+	password("password"),
 
 	/**
 	 * 上传路径
 	 */
-	storepath
+	storepath("storepath");
+
+	private String name;
+
+	Option(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
 }

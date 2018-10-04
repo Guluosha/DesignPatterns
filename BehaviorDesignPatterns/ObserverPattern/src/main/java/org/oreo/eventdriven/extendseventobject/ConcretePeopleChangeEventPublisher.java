@@ -7,7 +7,7 @@ package org.oreo.eventdriven.extendseventobject;
  * @date 2018/5/30 ~ 下午 6:09
  */
 
-public class ConcretePeopleChangeEvent extends AbstractPeopleChangeEvent {
+public class ConcretePeopleChangeEventPublisher extends AbstractPeopleChangeEventPublisher {
 
 	private People people;
 
@@ -25,6 +25,6 @@ public class ConcretePeopleChangeEvent extends AbstractPeopleChangeEvent {
 	}
 
 	private void notifyListeners(People people) {
-		super.publishPeopleChangedEvent(people);
+		super.publishPeopleChangeEvent(people);
 	}
 }

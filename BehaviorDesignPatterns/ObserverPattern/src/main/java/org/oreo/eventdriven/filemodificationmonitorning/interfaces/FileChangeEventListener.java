@@ -10,7 +10,7 @@ import java.util.EventListener;
  * @date 2018/6/27 ~ 下午 10:47
  */
 
-public interface FileChangeListener extends EventListener{
+public interface FileChangeEventListener extends EventListener{
 
 	/**
 	 * 监听文件，若文件变动，则触发此方法的调用

@@ -6,32 +6,33 @@ import java.util.Set;
 
 /**
  * CopyRight (C),YLINK-深圳雁联计算有限公司
+ * 抽象人物改变事件发布者（广播者）
  *
  * @author 李沛恒(QQ ： 单曲循环)
  * @date 2018/5/30 ~ 下午 5:57
  */
 
-public abstract class AbstractPeopleChangeEvent implements PeopleChangeEvent {
+public abstract class AbstractPeopleChangeEventPublisher implements PeopleChangeEventPublisher {
 
 	private static final Set<EventListener> LISTENERS = new HashSet<>();
 
-	protected void registerListener(EventListener listener) {
+	protected void registerPeopleChangeEventListener(EventListener listener) {
 		if (!LISTENERS.contains(listener)) {
 			LISTENERS.add(listener);
 		}
 	}
 
-	protected void removeListener(EventListener listener) {
+	protected void removePeopleChangeEventListener(EventListener listener) {
 		if (LISTENERS.contains(listener)) {
 			LISTENERS.remove(listener);
 		}
 	}
 
 	@Override
-	public void publishPeopleChangedEvent(Object eventObject) {
+	public void publishPeopleChangeEvent(Object eventObject) {
 		for (EventListener listener : LISTENERS) {
-			if (listener instanceof PeopleChangeListener) {
-				((PeopleChangeListener) listener).onPeopleChangeEvent(eventObject);
+			if (listener instanceof PeopleChangeEventListener) {
+				((PeopleChangeEventListener) listener).onPeopleChangeEvent(eventObject);
 			}
 		}
 	}

@@ -3,6 +3,7 @@ package org.oreo.eventdriven.filemodificationmonitorning;
 import org.oreo.eventdriven.filemodificationmonitorning.filters.*;
 import org.oreo.eventdriven.filemodificationmonitorning.messagelisteners.*;
 import org.oreo.eventdriven.filemodificationmonitorning.messagepublishers.*;
+import org.oreo.eventdriven.filemodificationmonitorning.optionenum.*;
 import org.oreo.eventdriven.filemodificationmonitorning.sftp.bean.*;
 
 import java.util.*;
@@ -16,25 +17,24 @@ import java.util.*;
 
 public class FileMonitorEntrance {
 
-	private static final String DELIMITER = ",";
-
 	public static void main(String[] args) {
 		ConcreteOptionHandlerChain concreteOptionHandlerChain = new ConcreteOptionHandlerChain();
 		concreteOptionHandlerChain.addOptionHandler(new InputOptionHandler());
 		Map<String, String> stringArguments = concreteOptionHandlerChain.handleOption(args, concreteOptionHandlerChain);
-		String filePath = stringArguments.get("filepath");
+		String filePath = stringArguments.get(Option.filepath.getName());
 		String[] paths = getPATHS(filePath);
-		SFTPConnectionInfoBean sftpConnectionInfoBean = new SFTPConnectionInfoBean(stringArguments.get("ip"), stringArguments.get("port"), stringArguments.get("username"), stringArguments.get("password"), stringArguments.get("storepath"));
+		SFTPConnectionInfoBean sftpConnectionInfoBean = new SFTPConnectionInfoBean(stringArguments.get(Option.ip.getName()), stringArguments.get(Option.port.getName()), stringArguments.get(Option.username.getName()), stringArguments.get(Option.password.getName()), stringArguments.get(Option.storepath.getName()));
 		ConcreteFileChangeEventPublisher concreteFileChangeEventPublisher = new ConcreteFileChangeEventPublisher();
-		ConcreteFileChangeListener concreteFileChangeListener = new ConcreteFileChangeListener();
+		ConcreteFileChangeEventListener concreteFileChangeListener = new ConcreteFileChangeEventListener();
 		concreteFileChangeEventPublisher.registryFileListeners(concreteFileChangeListener.setSftpConnectionInfoBean(sftpConnectionInfoBean));
 		concreteFileChangeEventPublisher.publishFileChangedEvent(paths);
 	}
 
 	private static String[] getPATHS(String filePath) {
 		if (filePath != null) {
-			if (filePath.contains(DELIMITER)) {
-				return filePath.split(DELIMITER);
+			String delimiter = ",";
+			if (filePath.contains(delimiter)) {
+				return filePath.split(delimiter);
 			} else {
 				String[] strings = new String[1];
 				strings[0] = filePath;

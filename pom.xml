@@ -11,11 +11,10 @@
 		<module>CreateTypeDesignPatterns</module>
 		<module>StructTypeDesignPatterns</module>
 		<module>BehaviorDesignPatterns</module>
-		<module>BehaviorDesignPatterns</module>
 	</modules>
 	<packaging>pom</packaging>
 	<description>
-		设计模式6原则：
+		面向对象设计6原则：
 		1.单一职责：一个类只负责一项工作
 		2.里氏替换：能用抽象父类的地方就用抽象父类作为参数
 		3.依赖倒置：面向接口而不是面向具体实现类

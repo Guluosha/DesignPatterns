@@ -8,7 +8,9 @@
 		<version>1.0.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<description>责任链模式</description>
+	<description>
+		责任链模式，有一个注意点，关于后继链的问题：1.由当前责任链节点指定新的链接（通常是抽象类，也可以是具体的类）；2.使用已有的链接（也就是链自身）
+	</description>
 
 	<artifactId>ChainOfResponsibilityPattern</artifactId>
 
